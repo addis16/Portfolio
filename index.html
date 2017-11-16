@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    html {
+        padding: 50px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    body{
+        background-image: url(beauty.jpg);
+        
+    }
+    #centerPanel {
+        width: auto;
+        height: auto;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 5px;
+        padding-bottom: 0px;
+        box-shadow: 1px 1px 1px black;
+        
+        
+        
+    }
+    #theFrame {
+        width: 0px;
+        height: 0px;
+        float: left;
+        clear: left;
+        border: 1px solid azure;
+        overflow: hidden;
+        box-shadow: 5px 5px 5px black;
+        
+    }
+    #projects {
+        height: auto;
+        width: auto;
+        float: right;
+        
+        border-radius: 5px;
+        display: none;
+        
+    }
+    #tutor-siteButton {
+        background-color: coral;
+        height: 50px;
+        width: 100px;
+        border-radius: 15px;
+        padding-left: 22px;
+        padding: 15px;
+        cursor: pointer;
+        border: 1px solid black;
+        display: inline-block;
+        box-shadow: 1px 1px 1px black;
+     
+        
+    }
+    #zodiac-siteButton {
+        background-color: darkslateblue;
+        height: 50px;
+        width: 110px;
+        border-radius: 15px;
+        padding-left: 22px;
+        padding: 15px;
+        cursor: pointer;
+        border: 1px solid black;
+        display: inline-block;
+        box-shadow: 1px 1px 1px black;
+     
+        
+    }
+    #projectsButton{
+        background-image: url(projects.PNG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        height: 50px;
+        width: 100px;
+        border-radius: 15px;
+        display: inline-block;
+        margin-right: 5px;
+        padding: 15px;
+        padding-left: 22px;
+        cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px black;
+    }
+    #resumeButton{
+        background-image: url(resume.PNG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 100px;
+        border-radius: 15px;
+        display: inline-block;
+        padding-left: 25px;
+        padding: 15px;
+        cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px black;
+    }
+    #linkedInButton{
+        background-image: url(linkedIn-logo.png);
+        background-size: cover;
+        
+        
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 130px;
+        border-radius: 15px;
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px black;
+    }
+    #gitHubButton{
+        background-image: url(github-logo.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-size: cover;
+        height: 50px;
+        width: 130px;
+        border-radius: 15px;
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px black;
+    }
+    #tattooButton{
+        background-image: url(Tattoos.PNG);
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+        height: 50px;
+        width: 130px;
+        border-radius: 15px;
+        display: inline-block;
+        padding-left: 25px;
+        padding: 15px;
+        cursor: pointer;
+        border: 1px solid black;
+        box-shadow: 1px 1px 1px black;
+    }
+    #resumeButton:hover {
+        
+        box-shadow: none;
+    }
+    #projectsButton:hover {
+        
+        box-shadow: none;
+    }
+    #tutor-siteButton:hover {
+        
+        box-shadow: none;
+    }
+    #zodiac-siteButton:hover {
+        
+        box-shadow: none;
+    }
+    #gitHubButton:hover {
+        
+        box-shadow: none;
+    }
+    #linkedInButton:hover {
+        
+        box-shadow: none;
+    }
+    #tattooButton:hover {
+        
+        box-shadow: none;
+    }
+    #bigFiller {
+        height: 350px;
+        width:40%;
+        background-color:transparent;
+    }
+    p {
+        font-size: 15px;
+        font-style: oblique;
+        display:inline;
+        text-shadow: 1px 1px 1px black;
+    }
+    #heading {
+        font-size: 30px;
+        font-family: fantasy;
+        color: brown;
+        clear: both;
+        text-shadow: 2px 5px 5px black;
+    }
+    #hider {
+        height: 50px;
+        width: 100px;
+        background-color: aqua;
+        display: inline-block;
+        float: right;
+        
+        
+    }
+    
+    
+</style>    
+</head>
+<body>
+<script>
+        
+    $(document).ready(function(){
+        $("#tutor-siteButton").click(function(){
+            $('#theFrame').animate({height: '0px'}, function() {
+            $('#theFrame').attr("src","http://www.shu-tutor.com");
+            $('#bigFiller').slideUp("slow");
+            $('#theFrame').animate({width: '100%'}, "slow");
+            $('#theFrame').animate({height: '800px'}, "slow");
+        
+        });
+        });
+    });
+    $(document).ready(function(){
+        $("#zodiac-siteButton").click(function(){
+            $('#theFrame').animate({height: '0px'}, function() {
+            $('#theFrame').attr("src","DepressionWebsite/index.html");
+            $('#bigFiller').slideUp("slow");
+            $('#theFrame').animate({width: '100%'}, "slow");
+            $('#theFrame').animate({height: '800px'}, "slow");
+        
+        });
+        });
+    });    
+    
+    $(document).ready(function(){
+        $('#projectsButton').mouseover(function(){ 
+            $('#projects').fadeIn(400);
+            $('#centerPanel').mouseleave(function(){
+                $('#projects').fadeOut(400);
+                
+            });
+            
+        });
+    });
+    $(document).ready(function(){
+        $('#resumeButton').click(function(){
+            $('#theFrame').animate({height: '0px'}, function() {
+            $('#bigFiller').slideUp();
+            $('#theFrame').animate({width: '100%'}, "slow");
+            $('#theFrame').animate({height: '800px'}, "slow");
+            $('#theFrame').attr("src","resume.html");
+            });
+        });
+    });
+    $(document).ready(function(){
+        $('#gitHubButton').mouseover(function(){ 
+            $('#projects').slideUp("slow");
+        $('#linkedInButton').mouseover(function(){
+            $('#projects').slideUp("slow");
+        $('#resumeButton').mouseover(function(){ 
+            $('#projects').slideUp("slow");
+        $('#tattooButton').mouseover(function(){ 
+            $('#projects').slideUp("slow");
+        });
+        });
+        });    
+        });
+    });
+    </script>
+    
+    <div id="bigFiller"></div>
+    
+    
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6"><h id="heading">Jacob Addis</h><div id="centerPanel">
+    <div id="resumeButton"></div><div id="linkedInButton" onclick="window.open('https://www.linkedin.com/in/jacob-addis-11955414a/')"></div><div id="gitHubButton" onclick="window.open('https://github.com/addis16')"></div><div id="tattooButton"><p></p></div><div id="projectsButton"><span class="glyphicons glyphicons-pen"></span></div><div id="projects"><div id="tutor-siteButton"><p>Tutor-site</p></div><div id="zodiac-siteButton"><p>Zodiac-site</p></div></div></div>
+    </div>
+    <div class="col-sm-2"></div>
+    <iframe id="theFrame" src="" scrolling=no seamless frameborder="0"></iframe>
+</body>    
+</html>
+
