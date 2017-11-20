@@ -6,57 +6,109 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <style>
+        @media only screen and (max-width: 1280px) {
+            #col1{
+                width: 33.333%;
+            }
+            #col2{
+                width: 33.333%;
+            }
+            #col3{
+                width: 33.333%;
+            }
+            #col4{
+                width: 33.333%;
+            }
+            
+        }
+        @media only screen and (max-width: 1022px) {
+            #col1{
+                width: 50%;
+            }
+            #col2{
+                width: 50%;
+            }
+            #col3{
+                width: 50%;
+            }
+            #col4{
+                width: 50%;
+            }
+            
+        }
+    @media only screen and (max-width: 780px) {
+            #col1{
+                width: 100%;
+            }
+            #col2{
+                width: 100%;
+            }
+            #col3{
+                width: 100%;
+            }
+            #col4{
+                width: 100%;
+            }
+            
+        }
     body {
+        padding: 30px;
         background-color: transparent;
         
     }
     #goalsContainer {
-        height: 200px;
-        width: px;
-        box-shadow: 3px 3px 3px black;
-        margin: 30px;
-        border: 1px solid black;
-        color: floralwhite;
+        box-shadow: 0px 3px 3px black;
+        border-top: 1px solid black;
+        color: ghostwhite;
         padding: 10px;
-        padding-right: 10px;
-        display: block;
+        display: inline-block;
+        border-radius: 2px
      
     }
-    #columnContainer {
+    #columnContainer{
         height: 500px;
+        min-height: 500px;
         width: 320px;
-        box-shadow: 3px 3px 3px black;
-        margin: 50px;
-        margin-top: 0px;
-        margin-left: 70px;
-        border: 1px solid black;
-        display: inline-block;
-        color: floralwhite;
+        min-width: 320px;
+        box-shadow: 0px 3px 3px black;
+        border-top: 1px solid black;
+        border-radius: 2px;
+        color: ghostwhite;
         padding: 20px;
-        display: inline-block;
         float: left;
-        
-    
-        
+        margin: 0 auto;
     }
+
     #columnContainer:hover {
-        box-shadow: 2px 2px 2px black;
+        box-shadow: 0px 3px 3px black;
     }
     #goalsContainer:hover {
-        box-shadow: 2px 2px 2px black;
+        box-shadow: 0px 3px 3px black;
     }
     p { 
-        word-break: break-all;
+        
         display: inline-flex;
         font-size: 16px;
         margin: 5px;
         margin-left: 7px;
         margin-right: 7px;
         font-weight: bold;
-        text-shadow: 1px 1px 1px black;
+        text-shadow: 2px 2px 1px black;
     }
     h1 {
         margin: 5px;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        font-size: 30px;
+        font-family:fantasy;
+        display: inline-flex;
+        font-weight: bold;
+        text-shadow: 2px 2px 1px black;
+    }
+    #h1-goal {
+        margin: 5px;
+        margin-top: 0px;
+        margin-bottom: 0px;
         font-size: 30px;
         font-family:fantasy;
         display: inline-flex;
@@ -65,22 +117,54 @@
     }
     h2 {
         display: inline-flex;
-        
         font-size: 18px;
         margin: 5px;
         font-weight: bolder;
-        text-shadow: 1px 1px 1px black;
+        text-shadow: 2px 2px 1px black;
+    }
+    .col-sm-3 {
+        padding-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #flex-container {
+    
+    }
+    #col1 {
+        
+    }
+    #col2 {
+        
+    }
+    #col3 {
+        
+    }
+    #col4 {
+        
     }
     
 </style>    
 </head>
 <body>
-    <div id="goalsContainer"><h1>Goal</h1><span class="glyphicon glyphicon-pencil"></span><p>I'm an artist and technician. Above all else I love to build unique things I can put my name on and be proud of. I obsess over my work and once I start a project, I can't sleep until It's on the right track to perfect. My short term goal is to become highly skilled at what I do, and it looks as if that will be web design. It's my favorite past time and something I want to master and I can't think of anything else I've ever done that Ienjoy doing more. I don't think I would mind spending my life learning and contributing to this field and I have a hard time imagining It will become boring with such a dynamic history. My life goal is to own my own web designbusiness and some day have five children who I will pass my knowledge to and keep whatever I am alive. </p></div>
-    <div id="columnContainer"><h1>Current Work</h1><br><h2 style="color: darkslateblue">Web Development</h2><br><p>More information  under Services<br>tab. I am still learning so I don't<br>charge much at all.</p><br><h2 style="color:darkorchid">Programming/Chinese Tutor</h2><br><p>Started tutoring programming and<br>Chinese junior year. $8 / hour.<br>About 5-10 hours a week. The<br>experience has been invaluable.</p>
-    <h2 style="color:darkorchid">Tatoo hobby</h2><br><p>Interest is with ancient Norse and<br>Celtic runes as well as Chinese<br>and Japanese Characters. The<br> tattooing is a byproduct of the<br>interest. I'm  cheap.</p>
+    <div id="flex-container">
+    <div id="goalsContainer"><h id="h1-goal">Goal</h><span class="glyphicon glyphicon-pencil"></span><p>I'm an artist and technician. Above all else I love to build unique things I can put my name on and be proud of. I obsess over my work and once I start a project, I can't sleep until it's on the right track to perfect. My short term goal is to become highly skilled at what I do, and it looks as if that will be web design. It's my favorite past-time and something I want to master and I can't think of anything that I enjoy doing more. I don't think I will mind spending my life learning and contributing to this field and I have a hard time imagining It will become boring with such a dynamic history. My life goal is to own my own web design business and some day have five children to whom I will pass my knowledge and keep my brand alive.</p></div>
+    
+    <div id="col1" class="col-sm-3">
+    <div id="columnContainer"><h1>Current Work</h1><br><h2 style="color: goldenrod">Web Development</h2><br><p>More information  under Services<br>tab. I am still learning so I don't<br>charge much at all.</p><br><h2 style="color:goldenrod">Programming/Chinese Tutor</h2><br><p>Started tutoring programming and<br>Chinese junior year. $8 / hour.<br>About 5-10 hours a week. The<br>experience has been invaluable.</p>
+    <h2 style="color:goldenrod">Tattoo hobby</h2><br><p>Interest is with ancient Norse and<br>Celtic runes as well as Chinese<br>and Japanese Characters. The<br> tattooing is a byproduct of the<br>interest.</p>
+    </div></div>
+    
+    <div id="col2" class="col-sm-3">
+    <div id="columnContainer"><h1>Education</h1><br><h2 style="color:firebrick">Seton Hill University</h2><br><h2 style="color:goldenrod">Computer Science Bachelors</h2><br><p>(Programming 1&2, Algorithms,<br>Networking, Data Structures,<br>Systems Admin, Software Engin,<br> Graphics, Compiler Basics)</p><br><p>Dean: Christopher Diaz p.h.d.</p><br><h2 style="color:goldenrod">Eastern Languages Minor</h2><br><p>Before Leaving will complete<br> Chinese 4 and Japanese 3. Also<br>Independently learning Arabic. It <br> is one of my goals to work in <br>Japan after college.</p>
+    </div></div>
+    
+    <div id="col3" class="col-sm-3">
+    <div id="columnContainer"><h1>Skills</h1><br><h2 style="color:goldenrod">Operating Systems:</h2><br><p>Windows, OSX, Linux, Unix</p><br><h2 style="color:goldenrod">Web Dev:</h2><br><p>HTML5, CSS3, JS, Jquery,<br>node.js, PHP, SQL, HTML Canvas</p><br><p>Learning: Angular, MEAN, Restful,  Ajax, Json, XML, Photoshop</p><br><h2 style="color:goldenrod">Mobile Dev:</h2><br><p>Xcode, Swift, JavaFX,<br> Responsive Web</p><br><h2 style="color:goldenrod">Development:</h2><br><p>Objective-C, Java, C++, Python<br>C#</p></div></div>
+    
+    <div id="col3" class="col-sm-3">
+    <div id="columnContainer"><h1>Other Skills</h1><br><h2 style="color:goldenrod">Chinese</h2><br><p>I love learning Chinese , As of yet<br>I cannot translate for people but I can read and write.</p><br><h2 style=color:goldenrod>Japanese</h2><p>I have not yet started classes but<br>I'm doing my own independent<br>study. Mostly Duolingo.</p><br><p>Sketch Artist</p><br><p>Teaching</p><br><p>Writing</p><br><p>Comfortable leading</p><br><p>Public Speaking</p><br><p>Work well with anyone</p>
+    </div></div>
     </div>
-    <div id="columnContainer"><h1>Education</h1><br><h2 style="color:firebrick">Seton Hill University</h2><br><h2 style="color:goldenrod">Computer Science Bachelors</h2><br><p>(Programming 1&2, Algorithms,<br>Networking, Data Structures,<br>Systems Admin, Software Engin, Graphics, Compiler Basics)</p><br><p>Dean: Christopher Diaz p.h.d.</p><br><h2 style="color:darkgoldenrod">Eastern Languages Minor</h2><br><p>Before Leaving will complete<br> Chinese 4 and Japanese 3. Also<br>Independently learning Arabic. It <br> is one of my goals to work in <br>Japan after college.</p></div>
-    <div id="columnContainer"><h1>Skills</h1><br><h2 style="color:dodgerblue">Operating Systems:</h2><br><p>Windows, OSX, Linux, Unix</p><br><h2 style="color:dodgerblue">Web Dev:</h2><br><p>HTML5, CSS3, JS, Jquery,<br>node.js, PHP, SQL, HTML Canvas</p><br><p>Learning: Angular, MEAN, Restful,  Ajax, Json, XML, Photoshop</p><br><h2 style="color:dodgerblue">Mobile Dev:</h2><br><p>Xcode, Swift, JavaFX,<br> Responsive Web</p><br><h2 style="color:dodgerblue">Development:</h2><br><p>Objective-C, Java, C++, Python<br>C#</p></div>
-    <div id="columnContainer"><h1>黥Other Skills</h1><br><h2 style="color:goldenrod">Chinese</h2><br><p>I love learning Chinese , As of yet I cannot translate for people but I can read and write.</p><br><h2 style=color:goldenrod>Japanese</h2><p>I have not yet started classes but I'm doing my own independent<br>study. Mostly Duolingo.</p><br><p>Sketch Artist</p><br><p>Teaching</p><br><p>Writing</p><br><p>Comfortable leading</p><br><p>Public Speaking</p><br><p>Work well with anyone</p></div>
 </body>    
 </html>

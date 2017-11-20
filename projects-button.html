@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+    #grow-button {
+        width: auto;
+        height: auto;
+        background-color: brown;
+        min-height: 50px;
+        display: inline-flex;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    #button1 {
+        background-color: aqua;
+        width: 130px;
+        height: 50px;
+        float: left;
+        display:inline-block;
+        
+    }
+    #container {
+        height: 50px;
+        width: 0px;
+        background-color: blueviolet;
+        float: left;
+        display:inline-block;
+    }
+    #button2 {
+        height: 50px;
+        width: 50px;
+        
+        background-color: chartreuse;
+        border-radius: 3px;
+        margin-left: 20px;
+        display: inline-block;
+        display: none;
+    }
+    #button3 {
+        height: 50px;
+        width: 50px;
+        
+        background-color: chartreuse;
+        border-radius: 3px;
+        margin-left: 20px;
+        display: inline-block;
+        display: none;
+    }
+    #button4 {
+        height: 50px;
+        width: 50px;
+        
+        background-color: chartreuse;
+        border-radius: 3px;
+        margin-left: 20px;
+        display: inline-block;
+        display: none;
+    }
+    #button5 {
+        height: 50px;
+        width: 50px;
+        
+        background-color: chartreuse;
+        border-radius: 3px;
+        margin-left: 20px;
+        display: inline-block;
+        display: none;
+    }
+  
+</style>
+    <script>
+        $(document).ready(function(){
+        $("#grow-button").mouseenter(function(){
+            $('#container').animate({width: '350px'}, "slow");
+            $('#button2').fadeIn("slow");
+            $('#button3').fadeIn("slow");
+            $('#button4').fadeIn("slow");
+            $('#button5').fadeIn("slow");
+            });
+            $("#grow-button").mouseleave(function(){
+            $('#button2').fadeOut("slow");
+            $('#button3').fadeOut("slow");
+            $('#button4').fadeOut("slow");
+            $('#button5').fadeOut("slow");    
+            $('#container').animate({width: '0px'}, "slow"); 
+            });
+        });
+     
+    </script>
+</head>
+    <body>
+        <div id="grow-button"><div id="button1"></div><div id="container"><div id="button2"></div><div id="button3"></div><div id="button4"></div><div id="button5"></div></div></div>
+    </body>
+</html>    
+
+
+
+
+
