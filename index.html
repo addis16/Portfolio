@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"> 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
     @media only screen and (max-width: 1400px) {
-       
+
         #flex-container {
-            min-height: 1380px;
-        }   
+            min-height: 1580px;
+        }
+        #theFrame {
+             min-height: 1580px;
+        }
     }
     @media only screen and (max-width: 900px) {
-       
+
         #flex-container {
             min-height: 2700px;
-        }    
+        }
+        #theFrame {
+            min-height: 2700px;
+        }
     }
     html {
+        width: 100%;
         height: 2000px;
         padding: 50px;
         padding-top: 0px;
@@ -28,6 +33,7 @@
     }
     body{
         background-color: transparent;
+        width: 100%;
     }
     #centerPanel {
         width: 100%;
@@ -43,6 +49,15 @@
         float: left;
         height: 100%;
         width: 100%;
+        margin: 0px auto;
+        display: flex;
+    }
+    #email-frame {
+        margin: 0px auto;
+        height: 0px;
+        width: 0px;
+        margin: 0px auto;
+        background-color: transparent;
     }
     #projects {
         height: 50px;
@@ -54,8 +69,8 @@
         padding: 4px;
     }
     #tutor-siteButton {
-        
-        background-image: url(blue-stone.PNG);
+
+        background-color: transparent;
         height: 40px;
         width: 130px;
         border-radius: 10px;
@@ -63,12 +78,10 @@
         padding-left: 20px;
         cursor: pointer;
         display: none;
-        box-shadow: 2px 2px 2px black;
-        margin-right: 10px;
     }
     #zodiac-siteButton {
-        
-        background-image: url(blue-stone.PNG);
+
+        background-color: transparent;
         height: 40px;
         width: 130px;
         border-radius: 10px;
@@ -77,7 +90,6 @@
         cursor: pointer;
         float: left;
         display: none;
-        box-shadow: 2px 2px 2px black;
     }
     #wrapper {
         display: inline-block;
@@ -110,6 +122,19 @@
         padding-top: 6px;
         float: left;
     }
+    #contactButton{
+        height: 50px;
+        width: 130px;
+        border-radius: 15px;
+        box-shadow: 1px 1px 1px black;
+        border: 1px solid black;
+        cursor: pointer;
+        background-image: url(stone4.PNG);
+        display: inline-block;
+        padding-left: 19px;
+        padding-top: 6px;
+        float: left;
+    }
     #button-container {
         height: auto;
         width: auto;
@@ -125,7 +150,7 @@
     }
     #projects-text {
         margin-top: 6px;
-        margin-right: 15px;
+        margin-right: 10px;
         font-size: 25px;
         text-shadow: 2px 2px 2px black;
         font-family: fantasy;
@@ -175,29 +200,29 @@
         float: left;
     }
     #resumeButton:hover {
-        
+
         box-shadow: none;
     }
     #tutor-siteButton:hover {
-        
-        box-shadow: 1px 1px 1px black;
-        border: 1px solid greenyellow;
+
+
+
     }
     #zodiac-siteButton:hover {
-        
-        box-shadow: 1px 1px 1px black;
-        border: 1px solid greenyellow;
+
+
+
     }
     #gitHubButton:hover {
-        
+
         box-shadow: none;
     }
     #linkedInButton:hover {
-        
+
         box-shadow: none;
     }
     #tattooButton:hover {
-        
+
         box-shadow: none;
     }
     #bigFiller {
@@ -220,104 +245,139 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        justify-content: center;
+        margin-bottom: 5px;
     }
-    #flex-container {
-        height: 0px;
-        width: 0px;
-        background-color: transparent;
-        box-shadow: 3px 5px 5px black;
-        border-radius: 3px;
-    }
-    
     #resume-button:hover {
         box-shadow: none;
     }
-</style>    
+    #flex-container{
+        height: auto;
+        width: auto;
+        display: flex;
+
+    }
+</style>
 </head>
 <body>
-<script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
 
-    $(document).ready(function(){
-        $("#tutor-siteButton").click(function(){
-            $('#bigFiller').slideUp("slow");
-            $('#flex-container').animate({height: '0px'}, "slow", function() {
-            document.getElementById('flex-container').style.border = "none"; 
-            $('#flex-container').animate({width: '100%'}, "fast");
-            $('#flex-container').animate({height: '1800px'}, 1000);
-            $('#theFrame').attr("src","http://www.shu-tutor.com");
-            });
-        });
-    });
-    $(document).ready(function(){
-        $("#zodiac-siteButton").click(function(){
-            $('#bigFiller').slideUp("slow");
-            $('#flex-container').animate({height: '0px'}, "slow", function() {
-            document.getElementById('flex-container').style.border = "none";
-            $('#flex-container').animate({width: '100%'}, "fast");
-            $('#flex-container').animate({height: '790px'}, "slow");
-            $('#theFrame').attr("src","DepressionWebsite/index.html");    
-            
-            });
-        });
-    });    
-    $(document).ready(function(){
-        $("#resumeButton").click(function(){
-            $('#bigFiller').slideUp("slow");
-            $('#flex-container').animate({height: '0px'}, "slow", function() {
-            document.getElementById('flex-container').style.border = "1px solid azure";
-            $('#flex-container').animate({width: '100%'}, "fast");
-            $('#flex-container').animate({height: '790px'}, "slow");
-            $('#theFrame').attr("src","resume.html");
-                
-                
-            });
-        });
-    });
-    $(document).ready(function(){
-        $("#projectsButton").mouseenter(function(){
-            $('#projects').animate({width: '300px'}, "slow");
-                $('#tutor-siteButton').fadeIn( function() {
-                    $('#zodiac-siteButton').fadeIn();    
+        $(document).ready(function(){
+            $("#tutor-siteButton").click(function(){
+                $('#bigFiller').slideUp("slow");
+                $('#theFrame').animate({height: '0px'}, "slow", function() {
+                    document.getElementById('flex-container').style.border = "none";
+                    $('#theFrame').animate({width: '100%'}, "fast");
+                    $('#theFrame').animate({height: '1800px'}, 1000);
+                    $('#theFrame').attr("src","http://www.shu-tutor.com");
                 });
-                
-            });
-            $("#projectsButton").mouseleave(function(){
-            $('#tutor-siteButton').fadeOut('fast');
-            $('#zodiac-siteButton').fadeOut('fast');    
-            $('#projects').animate({width: '0px'}, "slow", function() {
-                $('#tutor-siteButton').fadeOut(1);
-                $('#zodiac-siteButton').fadeOut(1);
-            });
             });
         });
-    $(document).ready(function(){
-        $("#centerPanel").mouseleave(function(){
-            $('#tutor-siteButton').fadeOut('fast');
-            $('#zodiac-siteButton').fadeOut('fast');
-            
+        $(document).ready(function(){
+            $("#zodiac-siteButton").click(function(){
+                $('#bigFiller').slideUp("slow");
+                $('#theFrame').animate({height: '0px'}, "slow", function() {
+                    document.getElementById('flex-container').style.border = "none";
+                    $('#theFrame').animate({width: '100%'}, "fast");
+                    $('#theFrame').animate({height: '790px'}, "slow");
+                    $('#theFrame').attr("src","DepressionWebsite/index.html");
+                });
+            });
         });
-    });
+        $(document).ready(function(){
+            $("#resumeButton").click(function(){
+                $('#bigFiller').slideUp("slow");
+                $('#theFrame').animate({height: '0px'}, "slow", function() {
+                    document.getElementById('flex-container').style.border = "1px solid azure";
+                    document.getElementById('flex-container').style.boxShadow = "2px 3px 3px black";
+                    $('#theFrame').animate({width: '100%'}, "fast");
+                    $('#theFrame').animate({height: '790px'}, "slow");
+                    $('#theFrame').attr("src","resume.html");
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#projectsButton").mouseenter(function(){
+                $('#projects').animate({width: '290px'}, "fast");
+                $('#tutor-siteButton').fadeIn("fast");
+                $('#zodiac-siteButton').fadeIn("fast");
+            });
+
+
+            $("#centerPanel").mouseleave(function(){
+                $('#tutor-siteButton').fadeOut('fast');
+                $('#zodiac-siteButton').fadeOut('fast');
+                $('#projects').animate({width: '0px'}, "fast", function() {
+                    $('#tutor-siteButton').fadeOut(0);
+                    $('#zodiac-siteButton').fadeOut(0);
+                    document.getElementById('tutor-siteButton').style.display = "none";
+                    document.getElementById('zodiac-siteButton').style.display = "none";
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#centerPanel").mouseleave(function(){
+                $('#tutor-siteButton').fadeOut('fast');
+                $('#zodiac-siteButton').fadeOut('fast');
+
+            });
+        });
+        $(document).ready(function(){
+            $("#contactButton").click(function(){
+                $('#bigFiller').slideUp("slow");
+                document.getElementById('flex-container').style.border = "none";
+                document.getElementById('flex-container').style.boxShadow = "none";
+                $('#theFrame').animate({height: '0px'}, "slow", function() {
+                    $('#theFrame').attr("src","contact-form.html");
+                    $('#theFrame').animate({width: '1000px'}, "fast");
+                    $('#theFrame').animate({height: '2000px'});
+                });
+            });
+        });
     </script>
     
     <div id="bigFiller"></div>
     <div id="big-container">
-    <div id="container">    
-        <h id="heading">Jacob Addis</h>
-        <div id="centerPanel">
-            <div id="resumeButton"><p id="button-text" style="color:chocolate">Resume</p></div>
-            <div id="linkedInButton" onclick="window.open('https://www.linkedin.com/in/jacob-addis-11955414a/')"></div>
-            <div id="gitHubButton" onclick="window.open('https://github.com/addis16')"></div>
-            <div id="tattooButton"><p id="button-text" style="color:blueviolet"><span style="font-weight:bolder;font-size:25px;color:white">&#5855;</span>Tattoos</p></div>
-            <div id="projectsButton"><p id="projects-text" style="color: firebrick">Projects</p><div id="projects">
-                <div id="wrapper"><div id="tutor-siteButton"><p id="button-text" style="font-size: 20px;color:darkgreen">Tutor Site</p></div></div>
-                <div id="wrapper"><div id="zodiac-siteButton"><p id="button-text" style="font-size: 20px;color: blueviolet">Zodiac Site</p></div></div>
-            </div></div>
+        <div id="container">
+            <h id="heading">Jacob Addis</h>
+            <div id="centerPanel">
+                <div id="resumeButton">
+                    <p id="button-text" style="color:chocolate">Resume</p>
+                </div>
+                <div id="contactButton">
+                    <p id="button-text" style="color:forestgreen">Contact</p>
+                </div>
+                <div id="linkedInButton" onclick="window.open('https://www.linkedin.com/in/jacob-addis-11955414a/')"></div>
+                <div id="gitHubButton" onclick="window.open('https://github.com/addis16')"></div>
+                <div id="tattooButton">
+                    <p id="button-text" style="color:blueviolet"><span style="font-weight:bolder;font-size:25px;color:white">&#5855;</span>Tattoos</p>
+                </div>
+                <div id="projectsButton">
+                    <p id="projects-text" style="color: firebrick">Projects</p>
+                    <div id="projects">
+                        <div id="wrapper">
+                            <div id="tutor-siteButton">
+                                <p id="button-text" style="font-size: 20px;color:darkgreen">Tutor Site</p>
+                            </div>
+                        </div>
+                        <div id="wrapper">
+                            <div id="zodiac-siteButton">
+                                <p id="button-text" style="font-size: 20px;color: blueviolet">Zodiac Site</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    </div>    
+    
     <div id="flex-container">
-    <iframe id="theFrame"src=""frameborder="0" scrolling="no"></iframe>
-    </div>    
-</body>    
+        <iframe id="theFrame" src=""frameborder="0" scrolling="no"></iframe>
+    </div>
+    <p style="bottom:0px;position: fixed; color: white; text-shadow: 1px 1px 1px black; font-size: 10px">Created with: HTML5 CSS3 JQuery Angular PHP</p>
+    
+</body>
 </html>
-

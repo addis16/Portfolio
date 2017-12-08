@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"> 
+    
+<style>
+    html {
+        height: auto;
+        width: auto;
+        padding-left: 0px;
+    }
+    body {
+        height: auto;
+        width: auto;
+        padding-left: 0px;
+    }
+   
+    input[type=submit] {
+        width: 101%;
+        height: 35px;
+        border-radius: 1px;
+        background-color: greenyellow;
+        box-shadow: 0px 3px 3px black;
+        border: 1px solid transparent;
+        
+    }
+    input[type=submit]:hover {
+        box-shadow: none;
+        box-shadow: 0px 1px 1px black;
+    }
+    input[type=text] {
+        height: 20px;
+        width: 100%;
+        border-radius: 1px;
+        box-shadow: 0px 3px 3px black;
+        background-color: azure;
+        border: 1px solid black;
+    }
+    #text-box {
+        height: 239px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 100%;
+        box-shadow: 0px 3px 3px black;
+        background-color: azure;
+    }
+
+    #email {
+        display: inline-block;
+        width: 100%;
+    }
+    p {
+        margin: 3px;
+        margin-left: 0px;
+        color: whitesmoke;
+        text-shadow: 1px 1px 1px black;
+        text-shadow: 1px 1px 1px black;
+    }
+ 
+</style>
+</head>
+<body>
+    <script>
+
+    </script>
+    
+    <div id="email">
+    <form action="mail.php" method="post" id="form">
+        <p>From:</p><input type="text" name="email" value="..."><br>
+        <p>Subject:</p><input type="text" name="Subject" value="..."><br>
+        <div style="display: inline-block; width: 100%">
+        <textarea name="message" id="text-box" form="form"></textarea><br>
+        </div>
+        <input type="submit" value="Send Email">
+        </form>
+        </div>
+    
+    
+
+</body>
+</html>
