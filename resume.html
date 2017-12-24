@@ -4,13 +4,10 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    
 <style>
-    }
     html{
         height: 100%;
         background-color: transparent;
@@ -126,14 +123,11 @@
         width: auto;
         display: inline-block;
     }
-</style>
-     
-</head>
-    
+</style>  
+</head>  
 <body ng-app="responsiveApp" ng-controller="responsive" ng-style="body-style">
-    
-    <script>
-        
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script> 
         var app = angular.module("responsiveApp", []);
         app.controller("responsive", function($scope, $window){ 
             $scope.width = $window.innerWidth;
@@ -198,37 +192,26 @@
                     $scope.updateWidth();
                     $scope.$apply();
                 }
-               
         });
-       
-   
     </script>
-   
-    
     <div id="goalsContainer">
         <h id="h1-goal">Goal</h>
         <span class="glyphicon glyphicon-pencil"></span>
         <p>I'm an artist and technician. Above all else I love to build unique things I can put my name on and be proud of. I obsess   over my work and once I start a project, I can't sleep until it's on the right track. I love software development, everything from web design to automata theory. My short term goal is to become highly skilled with web design with everything from the ui design down to the backend. I greatly enjoy and excel at design. I Want to be a full-stack developer and learning to be one is what I do in my free time. My long-term goal is to own my own software company.
         </p>
     </div>
-
     <div id="col1" ng-style="col1">
-        <div id="columnContainer"  ng-style="columnStyle"><h1>Current Work</h1><br><h2 style="color: goldenrod">Web Development</h2><br><p>More information  under Services<br>tab. I am still learning so I don't<br>charge much at all.</p><br><h2 style="color:goldenrod">Programming/Chinese Tutor</h2><br><p>Started tutoring programming and<br>Chinese junior year. $8 / hour.<br>About 5-10 hours a week. The<br>experience has been invaluable.</p>
+        <div id="columnContainer"  ng-style="columnStyle"><h1>Current Work</h1><br><h2 style="color: goldenrod">Web Development</h2><br><p>I am currently freelancing web development and building a tutoring site for my School for programming and Mandarin.</p><br><h2 style="color:goldenrod">Programming/Chinese Tutor</h2><br><p>Started tutoring programming and<br>Chinese junior year. $8 / hour.<br>About 5-10 hours a week. The<br>experience has been invaluable.</p>
         <h2 style="color:goldenrod">Tattoo hobby</h2><br><p>Interest is with ancient Norse and<br>Celtic runes as well as Chinese<br>and Japanese Characters. The<br> tattooing is a byproduct of the<br>interest.</p>
         </div>
     </div>
-
-
     <div id="col2" ng-style="col2">
         <div id="columnContainer" ng-style="columnStyle"><h1>Education</h1><br><h2 style="color:firebrick">Seton Hill University</h2><br><h2 style="color:goldenrod">Computer Science Bachelors</h2><br><p>(Programming 1&2, Algorithms,<br>Networking, Data Structures,<br>Systems Admin, Software Engin,<br> Graphics, Compiler Basics)</p><br><p>Dean: Christopher Diaz p.h.d.</p><br><h2 style="color:goldenrod">Eastern Languages Minor</h2><br><p>Before Leaving will complete<br> Chinese 4 and Japanese 3. It is one of my goals to work in <br>Japan after college.</p>
         </div>
     </div>
-
     <div id="col3" ng-style="col3">
         <div id="columnContainer" ng-style="columnStyle"><h1>Skills</h1><br><h2 style="color:goldenrod">Operating Systems:</h2><br><p>Windows, OSX, Linux, Unix</p><br><h2 style="color:goldenrod">Web Dev:</h2><br><p>HTML5, CSS3, JS, Jquery,<br>node.js, AngularJS, PHP, Ajax, Json, HTML Canvas</p><br><p>Learning: React, MEAN, Restful, SQL, XML, Photoshop</p><br><h2 style="color:goldenrod">Mobile Dev:</h2><br><p>Xcode, Swift, JavaFX,<br> Responsive Web</p><br><h2 style="color:goldenrod">Development:</h2><br><p>Objective-C, Java, C++</p></div>
     </div>
-
-
     <div id="col4" ng-style="col4">
         <div id="columnContainer" ng-style="columnStyle">
             <h1>Other Skills</h1><br><h2 style="color:goldenrod">Chinese</h2><br><p>I love learning Chinese , As of yet<br>I cannot translate for people but I can read and write.</p><br><h2 style=color:goldenrod>Japanese</h2><p>I have not yet started classes but<br>I'm doing my own independent<br>study. Mostly Duolingo.</p><br><p>Sketch Artist</p><br><p>Teaching</p><br><p>Writing</p><br><p>Comfortable leading</p><br><p>Public Speaking</p><br><p>Work well with anyone</p>
