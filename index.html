@@ -4,46 +4,41 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <style>
-    @media only screen and (max-width: 1400px) {
-
-        #flex-container {
-            min-height: 1580px;
-        }
+    @media only screen and (max-width: 1150px) {
+        
         #theFrame {
-             min-height: 1580px;
+            min-height: 1320px;
         }
     }
-    @media only screen and (max-width: 900px) {
-
-        #flex-container {
-            min-height: 2700px;
-        }
+    @media only screen and (max-width: 680px) {
+        
         #theFrame {
-            min-height: 2700px;
+            min-height: 2400px;
         }
     }
+
     html {
         width: 100%;
-        height: 2000px;
         padding: 50px;
         padding-top: 0px;
         padding-bottom: 30px;
         display: inline-block;
-        background-image: url(beauty.jpg);
+        background-image: url(backgrounds/9.png);
     }
-    body{
+    body {
         background-color: transparent;
         width: 100%;
     }
     #centerPanel {
         width: 100%;
         height: 100%;
-        border: 1px solid black;
         border-radius: 15px;
         padding: 5px;
         box-shadow: 1px 1px 1px black;
         margin: 0px auto;
         display: flex;
+        background-image: url(backgrounds/8.png);
+        
     }
     #theFrame {
         float: left;
@@ -51,6 +46,7 @@
         width: 100%;
         margin: 0px auto;
         display: flex;
+        overflow-y: scroll;
     }
     #email-frame {
         margin: 0px auto;
@@ -69,10 +65,19 @@
         padding: 4px;
     }
     #tutor-siteButton {
-
         background-color: transparent;
         height: 40px;
-        width: 130px;
+        width: auto;
+        border-radius: 10px;
+        padding: 6px;
+        padding-left: 20px;
+        cursor: pointer;
+        display: none;
+    }
+    #chinese-games-button {
+        background-color: transparent;
+        height: 40px;
+        width: auto;
         border-radius: 10px;
         padding: 6px;
         padding-left: 20px;
@@ -80,10 +85,9 @@
         display: none;
     }
     #zodiac-siteButton {
-
         background-color: transparent;
         height: 40px;
-        width: 130px;
+        width: auto;
         border-radius: 10px;
         padding: 6px;
         padding-left: 18px;
@@ -97,39 +101,39 @@
         height: auto;
         float: left;
     }
-    #projectsButton{
+    #projectsButton {
         height: 50px;
         width: auto;
         border-radius: 15px;
         box-shadow: 1px 1px 1px black;
         border: 1px solid black;
         cursor: pointer;
-        background-image: url(stone4.PNG);
+        background-image: url(backgrounds/2.png);
         display: inline-flex;
         padding-left: 20px;
         float: left;
     }
-    #resumeButton{
+    #resumeButton {
         height: 50px;
         width: 130px;
         border-radius: 15px;
         box-shadow: 1px 1px 1px black;
         border: 1px solid black;
         cursor: pointer;
-        background-image: url(stone4.PNG);
+        background-image: url(backgrounds/2.png);
         display: inline-block;
         padding-left: 19px;
         padding-top: 6px;
         float: left;
     }
-    #contactButton{
+    #contactButton {
         height: 50px;
         width: 130px;
         border-radius: 15px;
         box-shadow: 1px 1px 1px black;
         border: 1px solid black;
         cursor: pointer;
-        background-image: url(stone4.PNG);
+        background-image: url(backgrounds/2.png);
         display: inline-block;
         padding-left: 19px;
         padding-top: 6px;
@@ -147,6 +151,7 @@
         text-shadow: 2px 2px 2px black;
         font-family: fantasy;
         font-weight: 700;
+        margin:auto;
     }
     #projects-text {
         margin-top: 6px;
@@ -159,7 +164,7 @@
     #button-text:hover {
         text-shadow: 1px 1px 1px black;
     }
-    #linkedInButton{
+    #linkedInButton {
         background-image: url(linkedIn-logo.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -172,7 +177,7 @@
         box-shadow: 1px 1px 1px black;
         float: left;
     }
-    #gitHubButton{
+    #gitHubButton {
         background-image: url(github-logo.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -186,7 +191,7 @@
         box-shadow: 1px 1px 1px black;
         float: left;
     }
-    #tattooButton{
+    #tattooButton {
         height: 50px;
         width: 130px;
         border-radius: 15px;
@@ -199,20 +204,6 @@
         padding-top: 6px;
         float: left;
     }
-    #resumeButton:hover {
-
-        box-shadow: none;
-    }
-    #tutor-siteButton:hover {
-
-
-
-    }
-    #zodiac-siteButton:hover {
-
-
-
-    }
     #gitHubButton:hover {
 
         box-shadow: none;
@@ -221,14 +212,10 @@
 
         box-shadow: none;
     }
-    #tattooButton:hover {
-
-        box-shadow: none;
-    }
     #bigFiller {
         height: 350px;
-        width:40%;
-        background-color:transparent;
+        width: 40%;
+        background-color: transparent;
     }
     #heading {
         font-size: 30px;
@@ -251,17 +238,30 @@
     #resume-button:hover {
         box-shadow: none;
     }
-    #flex-container{
+    #flex-container {
         height: auto;
         width: auto;
         display: flex;
-
     }
+    .st-custom-button[data-network] {
+       display: inline-block;
+       padding: 5px 10px;
+       cursor: pointer;
+       font-weight: bold;
+       color: #fff;
+        position: relative;
+   }
+    .st-custom-button[data-network]:hover {
+        border: 1px solid greenyellow;
+    }
+    
+    
 </style>
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a4da6f93b93df0013cb5670&product=inline-share-buttons"></script>
     
     <script>
 
@@ -271,8 +271,19 @@
                 $('#theFrame').animate({height: '0px'}, "slow", function() {
                     document.getElementById('flex-container').style.border = "none";
                     $('#theFrame').animate({width: '100%'}, "fast");
-                    $('#theFrame').animate({height: '1800px'}, 1000);
+                    $('#theFrame').animate({height: '1300px'}, "slow");
                     $('#theFrame').attr("src","http://www.shu-tutor.com");
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#chinese-games-button").click(function(){
+                $('#bigFiller').slideUp("slow");
+                $('#theFrame').animate({height: '0px'}, "slow", function() {
+                    document.getElementById('flex-container').style.border = "none";
+                    $('#theFrame').animate({width: '100%'}, "fast");
+                    $('#theFrame').animate({height: '1300px'}, "slow");
+                    $('#theFrame').attr("src","http://www.shu-tutor.com/Chinese.html");
                 });
             });
         });
@@ -282,31 +293,31 @@
                 $('#theFrame').animate({height: '0px'}, "slow", function() {
                     document.getElementById('flex-container').style.border = "none";
                     $('#theFrame').animate({width: '100%'}, "fast");
-                    $('#theFrame').animate({height: '790px'}, "slow");
+                    $('#theFrame').animate({height: '760px'}, "slow");
                     $('#theFrame').attr("src","DepressionWebsite/index.html");
                 });
             });
         });
         $(document).ready(function(){
             $("#resumeButton").click(function(){
+                
                 $('#bigFiller').slideUp("slow");
                 $('#theFrame').animate({height: '0px'}, "slow", function() {
                     document.getElementById('flex-container').style.border = "1px solid azure";
                     document.getElementById('flex-container').style.boxShadow = "2px 3px 3px black";
                     $('#theFrame').animate({width: '100%'}, "fast");
-                    $('#theFrame').animate({height: '790px'}, "slow");
+                    $('#theFrame').animate({height: '760px'}, "slow");
                     $('#theFrame').attr("src","resume.html");
                 });
             });
         });
         $(document).ready(function(){
             $("#projectsButton").mouseenter(function(){
-                $('#projects').animate({width: '290px'}, "fast");
+                $('#projects').animate({width: '340px'}, "fast");
+                $('#chinese-games-button').fadeIn("fast");
                 $('#tutor-siteButton').fadeIn("fast");
                 $('#zodiac-siteButton').fadeIn("fast");
             });
-
-
             $("#centerPanel").mouseleave(function(){
                 $('#tutor-siteButton').fadeOut('fast');
                 $('#zodiac-siteButton').fadeOut('fast');
@@ -322,7 +333,7 @@
             $("#centerPanel").mouseleave(function(){
                 $('#tutor-siteButton').fadeOut('fast');
                 $('#zodiac-siteButton').fadeOut('fast');
-
+                $('#chinese-games-button').fadeOut('fast');
             });
         });
         $(document).ready(function(){
@@ -333,16 +344,32 @@
                 $('#theFrame').animate({height: '0px'}, "slow", function() {
                     $('#theFrame').attr("src","contact-form.html");
                     $('#theFrame').animate({width: '1000px'}, "fast");
-                    $('#theFrame').animate({height: '2000px'});
+                    $('#theFrame').animate({height: '700px'}, "slow");
                 });
             });
         });
+        (function(document) {
+           var shareButtons = document.querySelectorAll(".st-custom-button[data-network]");
+           for(var i = 0; i < shareButtons.length; i++) {
+              var shareButton = shareButtons[i];
+
+              shareButton.addEventListener("click", function(e) {
+                 var elm = e.target;
+                 var network = elm.dataset.network;
+
+                 console.log("share click: " + network);
+              });
+           }
+        })(document);
     </script>
+    
+    
     
     <div id="bigFiller"></div>
     <div id="big-container">
         <div id="container">
             <h id="heading">Jacob Addis</h>
+            
             <div id="centerPanel">
                 <div id="resumeButton">
                     <p id="button-text" style="color:chocolate">Resume</p>
@@ -352,9 +379,6 @@
                 </div>
                 <div id="linkedInButton" onclick="window.open('https://www.linkedin.com/in/jacob-addis-11955414a/')"></div>
                 <div id="gitHubButton" onclick="window.open('https://github.com/addis16')"></div>
-                <div id="tattooButton">
-                    <p id="button-text" style="color:blueviolet"><span style="font-weight:bolder;font-size:25px;color:white">&#5855;</span>Tattoos</p>
-                </div>
                 <div id="projectsButton">
                     <p id="projects-text" style="color: firebrick">Projects</p>
                     <div id="projects">
@@ -368,16 +392,24 @@
                                 <p id="button-text" style="font-size: 20px;color: blueviolet">Zodiac Site</p>
                             </div>
                         </div>
+                        <div id="wrapper">
+                            <div id="chinese-games-button">
+                                <p id="button-text" style="font-size: 20px;color:darkslateblue">Games</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
     <div id="flex-container">
         <iframe id="theFrame" src=""frameborder="0" scrolling="no"></iframe>
     </div>
-    <p style="bottom:0px;position: fixed; color: white; text-shadow: 1px 1px 1px black; font-size: 10px">Created with: HTML5 CSS3 JQuery Angular PHP</p>
-    
+    <div style="display: inline-flex; float: right; bottom: 0px; position: fixed; width: 100%;">
+        <div data-network="twitter" class="st-custom-button" style="background-color: cornflowerblue; border-radius: 15px; float: right">Tweet</div>
+        <div data-network="facebook" class="st-custom-button" style="background-color: royalblue; border-radius: 15px; float: right">Post</div> 
+        <div data-network="linkedin" class="st-custom-button" style="background-color: dodgerblue; border-radius: 15px; float: right">Share</div>
+    </div>
+    <p style=" color: cornflowerblue; cursor: pointer; position: fixed; bottom: 0px; margin-left: 200px; margin-bottom: 5px;" onclick="window.open('AddisResume.pdf')">View Standard Resume</p>
 </body>
 </html>

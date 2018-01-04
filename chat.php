@@ -55,7 +55,7 @@
                 float: right;
                 border: 1px solid transparent;
                 display: inline-block;
-                padding-left: 20px;
+                padding-left: 12px;
             }
             #input-box {
                 width: 70%;
@@ -81,6 +81,7 @@
                 padding: 5px;
                 margin: 5px;
                 box-shadow: 0px 2px 2px black;
+                border-radius: 4px;
             }
             #center {
                 display: flex;
@@ -100,6 +101,7 @@
                 display: inline-block;
                 float: left;
                 clear: both;
+                background-color: cornflowerblue;
             }
             #name-box {
                 display: inline-block;
@@ -109,6 +111,7 @@
                 padding: 10px;
                 padding-left: 0px;
                 font-size: 17px;
+                background-color: transparent;
             }
         </style>
     </head>    
@@ -158,12 +161,7 @@
                     url: "log.html",
                     cache: false,
                     success: function(html) {
-                     $("#text-container").html(html);
-
-                        var newScrollHeight = $("#text-container").attr("scrollHeight") - 20;
-                        if (newScrollHeight > oldScrollHeight) {
-                            $("#text-container").animate({ scrollTop: newScrollHeight }, 'normal');
-                        }
+                        $("#text-container").html(html);
                     },
                 });
             }
